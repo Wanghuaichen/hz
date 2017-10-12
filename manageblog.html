@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>日常考核页面</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.alerts.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/blog.js"></script>
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/plugins/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">深圳市<span>河长制管理系统</span></h1>
+
+
+            <div class="search">
+                <form action="" method="post">
+                    <input type="text" name="keyword" id="keyword" value="Enter keyword(s)"/>
+                    <button class="submitbutton"></button>
+                </form>
+            </div><!--search-->
+
+            <br clear="all"/>
+
+        </div><!--left-->
+
+        <div class="right">
+            <!--<div class="notification">
+                <a class="count" href="notifications.html"><span>9</span></a>
+            </div>
+            -->
+            <div class="userinfo">
+                <img src="images/thumbs/avatar.png" alt=""/>
+                <span>管理员</span>
+            </div><!--userinfo-->
+
+            <div class="userinfodrop">
+                <div class="avatar">
+                    <a href=""><img src="images/thumbs/avatar.png" alt=""/></a>
+                    <div class="changetheme">
+                        Change theme: <br/>
+                        <a class="default"></a>
+                        <a class="blueline"></a>
+                        <a class="greenline"></a>
+                        <a class="contrast"></a>
+                        <a class="custombg"></a>
+                    </div>
+                </div><!--avatar-->
+                <div class="userdata">
+                    <h4>管理员</h4>
+                    <span class="email">youremail@yourdomain.com</span>
+                    <ul>
+                        <li><a href="editprofile.html">编辑资料</a></li>
+                        <li><a href="accountsettings.html">账号设置</a></li>
+                        <li><a href="帮助.html">帮助</a></li>
+                        <li><a href="index.html">退出</a></li>
+                    </ul>
+                </div><!--userdata-->
+            </div><!--userinfodrop-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+        <ul class="headermenu">
+            <li><a href="basicinfo.html"><span class="icon icon-flatscreen"></span>信息展示</a></li>
+            <li class="current"><a href="polarization.html"><span class="icon icon-flag"></span>巡河管理</a></li>
+            <li><a href="supervision.html"><span class="icon icon-pencil"></span>检查与监督</a></li>
+            <li><a href="messages.html"><span class="icon icon-message"></span>信息交流</a></li>
+            <li><a href="complaints.html"><span class="icon icon-phone"></span>公众投诉</a></li>
+            <li><a href="reports.html"><span class="icon icon-chart"></span>报表统计</a></li>
+        </ul>
+
+
+    </div><!--header-->
+
+    <div class="vernav">
+        <ul>
+            <li class="current"><a href="manageblog.html" class="editor">事件与日志</a></li>
+            <li><a href="polarization.html">实时定位</a></li>
+        </ul>
+        <a class="togglemenu"></a>
+    </div><!--leftmenu-->
+
+    <div class="centercontent">
+
+        <div class="pageheader">
+            <h1 class="pagetitle">事件与日志</h1>
+            <span class="pagedesc">查看接收到的巡查员日志以及提交的事件</span>
+            <ul class="hornav blogmenu">
+                <li class="current"><a href="#msg01">事件</a></li>
+                <li><a href="#msg02">日志</a></li>
+            </ul>
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+            <div id="msg01" class="subcontent">
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable mailinbox">
+                    <colgroup>
+                        <col class="con1" width="8%"/>
+                        <col class="con1" width="15%"/>
+                        <col class="con0" width="59%"/>
+                        <col class="con1" width="8%"/>
+                        <col class="con1" width="14%"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th width="20" class="head1 aligncenter"><input type="checkbox" name="checkall"
+                                                                        class="checkall"/></th>
+                        <th class="head1">发送人</th>
+                        <th class="head0">主题</th>
+                        <th class="head1 attachement">处理结果</th>
+                        <th class="head0">时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>市政</td>
+                        <td><a href="" class="title">XXXXX违章建筑危害堤坝安全</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXXXX未取得污水排入排水管网许可证向城镇排水设施排放污水</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>环保</td>
+                        <td><a href="" class="title">XXX处堤岸垃圾</a></td>
+                        <td class="attachment">待处理</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>园林</td>
+                        <td><a href="" class="title">XXX处树木枯死</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXX公司在水利工程管理范围内破坏水利工程设施</a></td>
+                        <td class="attachment">待处理</td>
+                        <td class="date">2017.9.19</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>园林</td>
+                        <td><a href="" class="title">XXX处花坛被游客踩坏</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXX处堤坝坍塌</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.30</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>环保</td>
+                        <td><a href="" class="title">XXX处河岸处有漂浮垃圾</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- #msg01 -->
+            <div id="msg02" class="subcontent" style="display: none;">
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable mailinbox">
+                    <colgroup>
+                        <col class="con1" width="8%"/>
+                        <col class="con1" width="15%"/>
+                        <col class="con0" width="49%"/>
+                        <col class="con1" width="18%"/>
+                        <col class="con1" width="14%"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th width="20" class="head1 aligncenter"><input type="checkbox" name="checkall"
+                                                                        class="checkall"/></th>
+                        <th class="head1">日志上传者</th>
+                        <th class="head0">河段</th>
+                        <th class="head1 attachement">所属河长办公室</th>
+                        <th class="head0">时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>李达</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>王无</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>赵四</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>李二</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>黄志</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.19</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>杨林</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>管狐</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.30</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>朱任</td>
+                        <td><a href="" class="title">深圳河XXXX段</a></td>
+                        <td class="attachment">罗湖区河长办公室</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- #msg02 -->
+        </div><!--contentwrapper-->
+    </div><!--centercontent-->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>

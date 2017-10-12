@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>控制台页面</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <!--[if lte IE 8]>
+    <script language="javascript" type="text/javascript" src="js/plugins/excanvas.min.js"></script><![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/plugins/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">深圳市<span>河长制管理系统</span></h1>
+
+
+            <div class="search">
+                <form action="" method="post">
+                    <input type="text" name="keyword" id="keyword" value="请输入"/>
+                    <button class="submitbutton"></button>
+                </form>
+            </div><!--search-->
+
+            <br clear="all"/>
+
+        </div><!--left-->
+
+        <div class="right">
+            <!--<div class="notification">
+                <a class="count" href="ajax/notifications.html"><span>9</span></a>
+            </div>-->
+            <div class="userinfo">
+                <img src="images/thumbs/avatar.png" alt=""/>
+                <span>管理员</span>
+            </div><!--userinfo-->
+
+            <div class="userinfodrop">
+                <div class="avatar">
+                    <a href=""><img src="images/thumbs/avatarbig.png" alt=""/></a>
+                    <div class="changetheme">
+                        切换主题: <br/>
+                        <a class="default"></a>
+                        <a class="blueline"></a>
+                        <a class="greenline"></a>
+                        <a class="contrast"></a>
+                        <a class="custombg"></a>
+                    </div>
+                </div><!--avatar-->
+                <div class="userdata">
+                    <h4>管理员</h4>
+                    <span class="email">youremail@yourdomain.com</span>
+                    <ul>
+                        <li><a href="editprofile.html">编辑资料</a></li>
+                        <li><a href="accountsettings.html">账号设置</a></li>
+                        <li><a href="帮助.html">帮助</a></li>
+                        <li><a href="index.html">退出</a></li>
+                    </ul>
+                </div><!--userdata-->
+            </div><!--userinfodrop-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+        <ul class="headermenu">
+            <li><a href="basicinfo.html"><span class="icon icon-flatscreen"></span>信息展示</a></li>
+            <li><a href="polarization.html"><span class="icon icon-flag"></span>巡河管理</a></li>
+            <li><a href="supervision.html"><span class="icon icon-pencil"></span>检查与监督</a></li>
+            <li><a href="messages.html"><span class="icon icon-message"></span>信息交流</a></li>
+            <li class="current"><a href="complaints.html"><span class="icon icon-phone"></span>公众投诉</a></li>
+            <li><a href="reports.html"><span class="icon icon-chart"></span>报表统计</a></li>
+        </ul>
+    </div><!--header-->
+
+    <div class="vernav2 iconmenu">
+        <ul>
+            <li class="current"><a href="complaints.html" class="gallery">电话投诉</a></li>
+            <li><a href="complaints1.html" class="elements">网络投诉</a></li>
+        </ul>
+        <a class="togglemenu"></a>
+        <br/><br/>
+    </div><!--leftmenu-->
+
+    <div class="centercontent">
+
+        <div class="pageheader">
+            <h1 class="pagetitle">电话投诉</h1>
+            <span class="pagedesc"></span>
+
+            <ul class="hornav">
+                <li class="current"><a href="#updates">未处理投诉</a></li>
+                <li><a href="#activities">已处理投诉</a></li>
+            </ul>
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div id="updates" class="subcontent">
+
+                <div class="two_third dashboard_left">
+
+                    <br clear="all"/>
+                        <div class="title"><h3>最新电话投诉</h3></div>
+                                <ul class="entrylist">
+                                    <li>
+                                        <div class="entry_wrap">
+                                            
+                                            <div class="entry_content2">
+                                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                                    2017
+                                                </small>
+                                                <p>河道垃圾</p>
+                                                <p>
+                                                    <button class="stdbtn btn_lime">交付其他部门处理</button>
+                                                    <button class="stdbtn">转发下级河长办</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="even">
+                                        <div class="entry_wrap">
+                                            
+                                            <div class="entry_content2">
+                                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                                    2017
+                                                </small>
+                                                <p>河道垃圾</p>
+                                                <p>
+                                                    <button class="stdbtn btn_lime">交付其他部门处理</button>
+                                                    <button class="stdbtn">转发下级河长办</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="entry_wrap">
+                                            
+                                            <div class="entry_content2">
+                                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                                    2017
+                                                </small>
+                                                <p>河道垃圾</p>
+                                                <p>
+                                                    <button class="stdbtn btn_lime">交付其他部门处理</button>
+                                                    <button class="stdbtn">转发下级河长办</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="even">
+                                        <div class="entry_wrap">
+                                            
+                                            <div class="entry_content2">
+                                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                                    2017
+                                                </small>
+                                                <p>河道垃圾</p>
+                                                <p>
+                                                    <button class="stdbtn btn_lime">交付其他部门处理</button>
+                                                    <button class="stdbtn">转发下级河长办</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                </div><!--two_third dashboard_left -->
+
+                <div class="one_third last dashboard_right">
+                 <div class="widgetbox">
+                        <div class="title"><h3>巡河员联系列表</h3></div>
+                        <div class="widgetoptions">
+                            <a href="">添加或修改巡河员信息</a>
+                        </div>
+                        <div class="widgetcontent userlistwidget nopadding">
+                            <ul>
+                                <li>
+                                    <div class="avatar"><img alt="" src="images/thumbs/avatar1.png"/></div>
+                                    <div class="info">
+                                        <a href="">李广利</a> <br/>
+                                        深圳河XXX段(投诉编号1709101s2)<br/>XXX街道
+                                    </div><!--info-->
+                                </li>
+                                <li>
+                                    <div class="avatar"><img alt="" src="images/thumbs/avatar2.png"/></div>
+                                    <div class="info">
+                                        <a href="">孙亮</a> <br/>
+                                        深圳河XXX段(投诉编号1709101s2)<br/>XXX街道
+                                    </div><!--info-->
+                                </li>
+                                <li>
+                                    <div class="avatar"><img alt="" src="images/thumbs/avatar1.png"/></div>
+                                    <div class="info">
+                                        <a href="">赵佗</a> <br/>
+                                        深圳河XXX段(投诉编号1709101s2)<br/>XXX街道
+                                    </div><!--info-->
+                                </li>
+                                <li>
+                                    <div class="avatar"><img alt="" src="images/thumbs/avatar2.png"/></div>
+                                    <div class="info">
+                                        <a href="">李艾</a> <br/>
+                                        深圳河XXX段(投诉编号1709101s2)<br/>XXX街道
+                                    </div><!--info-->
+                                </li>
+                            </ul>
+                            <a class="more" href="">查看更多巡河员信息</a>
+                        </div><!--widgetcontent-->
+                    </div>
+                </div><!--one_third last-->
+
+            </div><!-- #updates -->
+
+            <div id="activities" class="subcontent" style="display: none;">
+                <ul class="shortcuts">
+                    <li><a href="" class="events"><span>记录</span></a></li>
+                    <li><a href="" class="analytics"><span>分析</span></a></li>
+                </ul>
+                &nbsp;<br clear="all"/>
+                <div class="title"><h3>已处理电话投诉</h3></div>
+                <ul class="entrylist">
+                    <li>
+                        <div class="entry_wrap">
+
+                            <div class="entry_content2">
+                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                    2017
+                                </small>
+                                <p>河道垃圾</p>
+                                <p>
+                                    <button class="stdbtn btn_lime">查看处理结果</button>
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="even">
+                        <div class="entry_wrap">
+
+                            <div class="entry_content2">
+                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                    2017
+                                </small>
+                                <p>河道垃圾</p>
+                                <p>
+                                    <button class="stdbtn btn_lime">查看处理结果</button>
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="entry_wrap">
+
+                            <div class="entry_content2">
+                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                    2017
+                                </small>
+                                <p>河道垃圾</p>
+                                <p>
+                                    <button class="stdbtn btn_lime">查看处理结果</button>
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="even">
+                        <div class="entry_wrap">
+
+                            <div class="entry_content2">
+                                <h4><a href="">深圳河XXX段(投诉编号1709101s2)</a></h4>
+                                <small>投诉人<a href=""><strong>赵丽丽</strong></a><br/>9月10日,
+                                    2017
+                                </small>
+                                <p>河道垃圾</p>
+                                <p>
+                                    <button class="stdbtn btn_lime">查看处理结果</button>
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- #activities -->
+
+        </div><!--contentwrapper-->
+
+        <br clear="all"/>
+
+    </div><!-- centercontent -->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>

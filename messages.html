@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>信息交流</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.flot.resize.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/messages.js"></script>
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/plugins/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">深圳市<span>河长制管理系统</span></h1>
+            <div class="search">
+                <form action="" method="post">
+                    <input type="text" name="keyword" id="keyword" value="Enter keyword(s)"/>
+                    <button class="submitbutton"></button>
+                </form>
+            </div><!--search-->
+
+            <br clear="all"/>
+
+        </div><!--left-->
+
+        <div class="right">
+            <!--<div class="notification">
+                <a class="count" href="notifications.html"><span>9</span></a>
+            </div>
+            -->
+            <div class="userinfo">
+                <img src="images/thumbs/avatar.png" alt=""/>
+                <span>管理员</span>
+            </div><!--userinfo-->
+
+            <div class="userinfodrop">
+                <div class="avatar">
+                    <a href=""><img src="images/thumbs/avatar.png" alt=""/></a>
+                    <div class="changetheme">
+                        Change theme: <br/>
+                        <a class="default"></a>
+                        <a class="blueline"></a>
+                        <a class="greenline"></a>
+                        <a class="contrast"></a>
+                        <a class="custombg"></a>
+                    </div>
+                </div><!--avatar-->
+                <div class="userdata"><h4>管理员</h4>                     <span
+                        class="email">youremail@yourdomain.com</span>
+                    <ul>
+                        <li><a href="editprofile.html">编辑资料</a></li>
+                        <li><a href="accountsettings.html">账号设置</a></li>
+                        <li><a href="帮助.html">帮助</a></li>
+                        <li><a href="index.html">退出</a></li>
+                    </ul>
+                </div><!--userdata-->
+            </div><!--userinfodrop-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+        <ul class="headermenu">
+            <li><a href="basicinfo.html"><span class="icon icon-flatscreen"></span>信息展示</a></li>
+            <li><a href="polarization.html"><span class="icon icon-flag"></span>巡河管理</a></li>
+            <li><a href="supervision.html"><span class="icon icon-pencil"></span>检查与监督</a></li>
+            <li class="current"><a href="messages.html"><span class="icon icon-message"></span>信息交流</a></li>
+            <li><a href="complaints.html"><span class="icon icon-phone"></span>公众投诉</a></li>
+            <li><a href="reports.html"><span class="icon icon-chart"></span>报表统计</a></li>
+        </ul>
+
+
+
+    </div><!--header-->
+
+    <div class="vernav iconmenu">
+        <ul>
+            <li class="current"><a href="messages.html" class="inbox">环保部门</a></li>
+            <li><a href="messages.html" class="inbox">水务部门</a></li>
+            <li><a href="messages.html" class="inbox">园林部门</a></li>
+            <li><a href="messages.html" class="inbox">交通部门</a></li>
+        </ul>
+        <a class="togglemenu"></a>
+        <br/><br/>
+    </div><!--leftmenu-->
+
+    <div class="centercontent">
+
+        <div class="pageheader">
+            <h1 class="pagetitle">信息交流</h1>
+            <span class="pagedesc">其他部门信息汇总</span>
+
+            <ul class="hornav">
+                <li class="current"><a href="#compose">水情水势</a></li>
+                <li><a href="#inbox">水质</a></li>
+                <li><a href="#compose2">其他信息</a></li>
+            </ul>
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div id="inbox" class="subcontent" style="display: none">
+                <div class="contenttitle2">
+                    <h2>地表水质超标统计表</h2>
+                </div><!--contenttitle-->
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                    <colgroup>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="head0">河流名称</th>
+                        <th class="head1">水质</th>
+                        <th class="head0">测量站点名称</th>
+                        <th class="head1">取水时间</th>
+                        <th class="head0">水质变化</th>
+                        <th class="head1">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="con0">沙湾河</td>
+                        <td class="con1">Ⅳ</td>
+                        <td class="con0">XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>莲塘河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>布吉河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>石湖河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>深圳河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>沙湾河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="contenttitle2">
+                    <h2>地下水质超标统计表</h2>
+                </div><!--contenttitle-->
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                    <colgroup>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="head0">河流名称</th>
+                        <th class="head1">水质</th>
+                        <th class="head0">测量站点名称</th>
+                        <th class="head1">取水时间</th>
+                        <th class="head0">水质变化</th>
+                        <th class="head1">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="con0">沙湾河</td>
+                        <td class="con1">Ⅳ</td>
+                        <td class="con0">XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>莲塘河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>布吉河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>石湖河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>深圳河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>沙湾河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="contenttitle2">
+                    <h2>污水水质超标统计表</h2>
+                </div><!--contenttitle-->
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                    <colgroup>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                        <col class="con0"/>
+                        <col class="con1"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="head0">河流名称</th>
+                        <th class="head1">水质</th>
+                        <th class="head0">测量站点名称</th>
+                        <th class="head1">取水时间</th>
+                        <th class="head0">水质变化</th>
+                        <th class="head1">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="con0">沙湾河</td>
+                        <td class="con1">Ⅳ</td>
+                        <td class="con0">XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>莲塘河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>布吉河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>石湖河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>深圳河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    <tr>
+                        <td>沙湾河</td>
+                        <td>Ⅳ</td>
+                        <td>XXXX测量站</td>
+                        <td class="center">2017.09.27-15:30</td>
+                        <td class="center">↑</td>
+                        <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br/>
+
+            </div><!-- #activities -->
+            <div id="compose" class="subcontent" >&nbsp;
+                <div class="two_third dashboard_left">
+
+                    <br clear="all"/>
+                    <div class="contenttitle2">
+                        <h2>水位警戒表</h2>
+                    </div><!--contenttitle-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                        <colgroup>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="head0">河流名称</th>
+                            <th class="head1">水位</th>
+                            <th class="head0">测量站点</th>
+                            <th class="head1">取水时间</th>
+                            <th class="head0">水位变化</th>
+                            <th class="head1">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="con0">沙湾河</td>
+                            <td class="con1">####</td>
+                            <td class="con0">XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        <tr>
+                            <td>莲塘河</td>
+                            <td>####</td>
+                            <td>XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        <tr>
+                            <td>布吉河</td>
+                            <td>####</td>
+                            <td>XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        <tr>
+                            <td>石湖河</td>
+                            <td>####</td>
+                            <td>XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        <tr>
+                            <td>深圳河</td>
+                            <td>####</td>
+                            <td>XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        <tr>
+                            <td>沙湾河</td>
+                            <td>####</td>
+                            <td>XXXX测量站</td>
+                            <td class="center">2017.09.27-15:30</td>
+                            <td class="center">↑</td>
+                            <td class="center"><a href="#" class="toggle">查看详细图表</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <div class="contenttitle2 nomargintop">
+                        <h2>深圳河主径流量变化图</h2>
+                    </div><!--contenttitle-->
+                    <div class="overviewhead">
+                        <div class="overviewselect">
+                            <select id="overviewselect" name="select">
+                                <option value="">最近1个小时</option>
+                                <option value="">最近5个小时</option>
+                                <option value="">今天</option>
+                                <option value="">昨天</option>
+                                <option value="">本周</option>
+                                <option value="">上周</option>
+                                <option value="">本月</option>
+                                <option value="">上月</option>
+                            </select>
+                        </div><!--floatright-->
+                        From: &nbsp;<input type="text" id="datepickfrom"/> &nbsp; &nbsp; To: &nbsp;<input type="text"
+                                                                                                          id="datepickto"/>
+                    </div><!--overviewhead-->
+
+                    <br clear="all"/>
+
+                    <div id="chartplace" style="height:300px;"></div>
+
+                    <br clear="all"/>
+
+                    <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablecb overviewtable2">
+                        <colgroup>
+                            <col class="con0" style="width: 4%"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                        </colgroup>
+                    </table>
+                    <br/>
+                </div><!--two_third dashboard_left -->
+            </div>
+            <div id="compose2" class="subcontent" style="display: none">&nbsp;</div>
+        </div><!--contentwrapper-->
+
+    </div><!--centercontent-->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>检查与监督</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/tables.js"></script>
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/plugins/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">深圳市<span>河长制管理系统</span></h1>
+            <div class="search">
+                <form action="" method="post">
+                    <input type="text" name="keyword" id="keyword" value="Enter keyword(s)"/>
+                    <button class="submitbutton"></button>
+                </form>
+            </div><!--search-->
+
+            <br clear="all"/>
+
+        </div><!--left-->
+
+        <div class="right">
+            <!--<div class="notification">
+                <a class="count" href="notifications.html"><span>9</span></a>
+            </div>
+            -->
+            <div class="userinfo">
+                <img src="images/thumbs/avatar.png" alt=""/>
+                <span>管理员</span>
+            </div><!--userinfo-->
+
+            <div class="userinfodrop">
+                <div class="avatar">
+                    <a href=""><img src="images/thumbs/avatar.png" alt=""/></a>
+                    <div class="changetheme">
+                        Change theme: <br/>
+                        <a class="default"></a>
+                        <a class="blueline"></a>
+                        <a class="greenline"></a>
+                        <a class="contrast"></a>
+                        <a class="custombg"></a>
+                    </div>
+                </div><!--avatar-->
+                <div class="userdata"><h4>管理员</h4>                     <span
+                        class="email">youremail@yourdomain.com</span>
+                    <ul>
+                        <li><a href="editprofile.html">编辑资料</a></li>
+                        <li><a href="accountsettings.html">账号设置</a></li>
+                        <li><a href="帮助.html">帮助</a></li>
+                        <li><a href="index.html">退出</a></li>
+                    </ul>
+                </div><!--userdata-->
+            </div><!--userinfodrop-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+        <ul class="headermenu">
+            <li><a href="basicinfo.html"><span class="icon icon-flatscreen"></span>信息展示</a></li>
+            <li><a href="polarization.html"><span class="icon icon-flag"></span>巡河管理</a></li>
+            <li class="current"><a href="supervision.html"><span class="icon icon-pencil"></span>检查与监督</a></li>
+            <li><a href="messages.html"><span class="icon icon-message"></span>信息交流</a></li>
+            <li><a href="complaints.html"><span class="icon icon-phone"></span>公众投诉</a></li>
+            <li><a href="reports.html"><span class="icon icon-chart"></span>报表统计</a></li>
+        </ul>
+
+
+    </div><!--header-->
+
+    <div class="vernav2 iconmenu">
+        <ul>
+            <li class="current"><a href="supervision.html" class="tables">巡查员监督管理</a></li>
+            <li><a href="supervision_1.html" class="buttons">向下级河长办传达指示</a></li>
+            <li><a href="supervision_2.html" class="buttons">向上级河长办请求</a></li>
+            <li><a href="supervision_3.html" class="buttons">与其他部门间联系</a></li>
+        </ul>
+        <a class="togglemenu"></a>
+        <br/><br/>
+    </div><!--leftmenu-->
+
+    <div class="centercontent tables">
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">巡查员巡查工作情况列表</h1>
+            <span class="pagedesc"></span>
+
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div class="contenttitle2">
+                <h3>巡查员巡查工作情况列表</h3>
+            </div><!--contenttitle-->
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable" id="dyntable2">
+                <colgroup>
+                    <col class="con0" style="width: 4%"/>
+                    <col class="con1"/>
+                    <col class="con0"/>
+                    <col class="con1"/>
+                    <col class="con0"/>
+                    <col class="con1"/>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="head0 nosort"><input type="checkbox"/></th>
+                    <th class="head0">巡查员姓名</th>
+                    <th class="head1">巡查河段</th>
+                    <th class="head0">巡查长度</th>
+                    <th class="head1">巡查日志是否上传</th>
+                    <th class="head0">巡查工作完成情况</th>
+                    <th class="head1">巡查时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>大沙河XX段</td>
+                    <td>200m</td>
+                    <td class="center">否</td>
+                    <td class="center">未完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeC">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>大沙河XX2段</td>
+                    <td>500m</td>
+                    <td class="center">否</td>
+                    <td class="center">未完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>大沙河XX3段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>大沙河XX4段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>深圳河XX1段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>李明</td>
+                    <td>深圳河XX2段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX3段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX6段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX4段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX4段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX2段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX1段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX4段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX2段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>布吉河XX2段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>布吉河XX3段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>布吉河XX4段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>布吉河XX5段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX5段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX6段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX7段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX9段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>深圳河XX10段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>布吉河XX10段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX10段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>沙城</td>
+                    <td>沙湾河XX11段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>林轩</td>
+                    <td>布吉河XX11段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                <tr class="gradeA">
+                    <td align="center"><span class="center">
+                            <input type="checkbox"/>
+                          </span></td>
+                    <td>林轩</td>
+                    <td>布吉河XX11段</td>
+                    <td>5000m</td>
+                    <td class="center">是</td>
+                    <td class="center">完成</td> <td class="center">2017/09/16-10:30</td
+                </tr>
+                </tbody>
+            </table>
+
+        </div><!--contentwrapper-->
+
+    </div><!-- centercontent -->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>

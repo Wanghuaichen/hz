@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>信息展示</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.flot.resize.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/dashboard.js"></script>
+    <!--[if lte IE 8]>
+    <script language="javascript" type="text/javascript" src="js/plugins/excanvas.min.js"></script><![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/plugins/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">深圳市<span>河长制管理系统</span></h1>
+            <div class="search">
+                <form action="" method="post">
+                    <input type="text" name="keyword" id="keyword" value="请输入"/>
+                    <button class="submitbutton"></button>
+                </form>
+            </div><!--search-->
+            <br clear="all"/>
+        </div><!--left-->
+        <div class="right">
+            <!--<div class="notification">
+                <a class="count" href="ajax/notifications.html"><span>9</span></a>
+            </div>-->
+            <div class="userinfo">
+                <img src="images/thumbs/avatar.png" alt=""/>
+                <span>管理员</span>
+            </div><!--userinfo-->
+
+            <div class="userinfodrop">
+                <div class="avatar">
+                    <a href=""><img src="images/thumbs/avatarbig.png" alt=""/></a>
+                    <div class="changetheme">
+                        切换主题: <br/>
+                        <a class="default"></a>
+                        <a class="blueline"></a>
+                        <a class="greenline"></a>
+                        <a class="contrast"></a>
+                        <a class="custombg"></a>
+                    </div>
+                </div><!--avatar-->
+                <div class="userdata">
+                    <h4>管理员</h4>
+                    <span class="email">youremail@yourdomain.com</span>
+                    <ul>
+                        <li><a href="editprofile.html">编辑资料</a></li>
+                        <li><a href="accountsettings.html">账号设置</a></li>
+                        <li><a href="帮助.html">帮助</a></li>
+                        <li><a href="index.html">退出</a></li>
+                    </ul>
+                </div><!--userdata-->
+            </div><!--userinfodrop-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+        <ul class="headermenu">
+            <li class="current"><a href="basicinfo.html"><span class="icon icon-flatscreen"></span>信息展示</a></li>
+            <li><a href="polarization.html"><span class="icon icon-flag"></span>巡河管理</a></li>
+            <li><a href="supervision.html"><span class="icon icon-pencil"></span>检查与监督</a></li>
+            <li><a href="messages.html"><span class="icon icon-message"></span>信息交流</a></li>
+            <li><a href="complaints.html"><span class="icon icon-phone"></span>公众投诉</a></li>
+            <li><a href="reports.html"><span class="icon icon-chart"></span>报表统计</a></li>
+        </ul>
+
+
+    </div><!--header-->
+
+    <div class="vernav">
+        <ul>
+            <!--<li class="current"><a href="dashboard.html" class="dashboard_left">首页</a></li>-->
+            <li><a href="basicinfo.html" class="typo">河流湖泊基本信息</a></li>
+            <li><a href="typography.html" class="typography">堤防信息</a></li>
+            <li><a href="utilities.html" class="utilities">岸线及公共设施</a></li>
+            <li><a href="sewage.html" class="sewage">污水治理工程</a></li>
+            <li><a href="productlist.html" class="productlist">专题展示</a></li>
+        </ul>
+        <a class="togglemenu"></a>
+        <br/><br/>
+    </div><!--leftmenu-->
+
+    <div class="centercontent">
+
+        <div class="pageheader">
+            <ul class="hornav">
+                <li class="current"><a href="#updates">最新更新</a></li>
+                <li><a href="#activities">信息交流</a></li>
+            </ul>
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div id="activities" class="subcontent" style="display: none;">
+                <div class="msghead">
+                    <ul class="msghead_menu">
+                        <li><a class="reportspam">Report Spam</a></li>
+                        <li class="marginleft5 dropdown" id="actions">
+                            <a class="dropdown_label" href="#actions">
+                                Actions
+                                <span class="arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="">Mark as Read</a></li>
+                                <li><a href="">Mark as Unread</a></li>
+                                <li><a href="">Move to Folder</a></li>
+                                <li><a href="">Add Star</a></li>
+                            </ul>
+                        </li>
+                        <li class="marginleft5"><a class="msgtrash" title="Trash"></a></li>
+                        <li class="right"><a class="next"></a></li>
+                        <li class="right"><a class="prev prev_disabled"></a></li>
+                    </ul>
+                    <span class="clearall"></span>
+                </div><!--msghead-->
+
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable mailinbox">
+                    <colgroup>
+                        <col class="con1" width="8%"/>
+                        <col class="con1" width="15%"/>
+                        <col class="con0" width="59%"/>
+                        <col class="con1" width="8%"/>
+                        <col class="con1" width="14%"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th width="20" class="head1 aligncenter"><input type="checkbox" name="checkall"
+                                                                        class="checkall"/></th>
+                        <th class="head1">发送人</th>
+                        <th class="head0">主题</th>
+                        <th class="head1 attachement">处理结果</th>
+                        <th class="head0">时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>市政</td>
+                        <td><a href="" class="title">XXXXX违章建筑危害堤坝安全</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXXXX未取得污水排入排水管网许可证向城镇排水设施排放污水</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>环保</td>
+                        <td><a href="" class="title">XXX处堤岸垃圾</a></td>
+                        <td class="attachment">待处理</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>园林</td>
+                        <td><a href="" class="title">XXX处树木枯死</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.20</td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXX公司在水利工程管理范围内破坏水利工程设施</a></td>
+                        <td class="attachment">待处理</td>
+                        <td class="date">2017.9.19</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>园林</td>
+                        <td><a href="" class="title">XXX处花坛被游客踩坏</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.1</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>水务</td>
+                        <td><a href="" class="title">XXX处堤坝坍塌</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.30</td>
+                    </tr>
+                    <tr>
+                        <td class="aligncenter"><input type="checkbox" name=""/></td>
+                        <td>环保</td>
+                        <td><a href="" class="title">XXX处河岸处有漂浮垃圾</a></td>
+                        <td class="attachment">已处理</td>
+                        <td class="date">2017.9.28</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- #activities -->
+
+            <div id="updates" class="subcontent">
+                <div class="notibar announcement">
+                    <a class="close"></a>
+                    <h3>重要通知</h3>
+                    <p>中共中央办公厅 国务院办公厅印发《关于全面推行河长制的意见》</p>
+                </div><!-- notification announcement -->
+                <div class="two_third dashboard_left">
+
+                    <br clear="all"/>
+
+                    <div class="contenttitle2 nomargintop">
+                        <h2>访问量统计</h2>
+                    </div><!--contenttitle-->
+
+                    <div class="overviewhead">
+                        <div class="overviewselect">
+                            <select id="overviewselect" name="select">
+                                <option value="">最近1个小时</option>
+                                <option value="">最近5个小时</option>
+                                <option value="">今天</option>
+                                <option value="">昨天</option>
+                                <option value="">本周</option>
+                                <option value="">上周</option>
+                                <option value="">本月</option>
+                                <option value="">上月</option>
+                            </select>
+                        </div><!--floatright-->
+                        From: &nbsp;<input type="text" id="datepickfrom"/> &nbsp; &nbsp; To: &nbsp;<input type="text"
+                                                                                                          id="datepickto"/>
+                    </div><!--overviewhead-->
+
+                    <br clear="all"/>
+
+                    <br clear="all"/>
+
+                    <div id="chartplace" style="height:300px;"></div>
+
+                    <br clear="all"/>
+
+                    <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablecb overviewtable2">
+                        <colgroup>
+                            <col class="con0" style="width: 4%"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                            <col class="con0"/>
+                            <col class="con1"/>
+                        </colgroup>
+                    </table>
+                    <br/>
+                </div><!--two_third dashboard_left -->
+
+                <div class="one_third last dashboard_right">
+                    <div class="widgetbox">
+                        <div class="title"><h3>最新通知</h3></div>
+                        <div class="widgetcontent">
+                            <div id="accordion" class="accordion">
+                                <h3><a href="#">深圳市水务局2017年8月城市供水水质公报</a></h3>
+                                <div>
+                                    <p>
+                                        　根据市政府批准的《深圳市城市供水水质公报实施方案》，2017年8月，我局对全市45个水厂出厂水水样以及68个管网水水样进行了抽检，现将水质抽检结果向社会公布（见附表）。检测结果表明，依据GB
+                                        5749—2006《生活饮用水卫生标准》，所有受检45个出厂水水样和68个管网水水样的浑浊度、游离氯、色度、菌落总数、总大肠菌群及臭和味共6项常规指标全部合格，出厂水水样合格率为100%，管网水水样合格率为100%。
+
+                                        　　深圳市水务局供水咨询电话：83072200
+
+                                        　　深圳市水质检测中心咨询电话：26700728
+
+                                        　　详情请登录深圳水务网查阅
+
+                                        　　网址：http://www.szwrb.gov.cn/　
+                                    </p>
+                                </div>
+                                <h3><a href="#">胡细银副局长在全市各部门共同见证下签发我市第一张政务电子证照</a></h3>
+                                <div>
+                                    <p>
+                                        　9月29日上午，市政府办公厅在龙华区行政服务大厅举行了我市公共服务综合信息系统上线暨第一张政务电子证照签发仪式，正式启动市公共服务综合信息系统，我局作为全市首家完成审批服务系统与市电子证照系统对接的单位，率先具备了审批服务证照的电子签发功能。会上，在市委常委刘庆生，市政府办公厅、编办、经贸信息委、水务局、政务办负责同志，以及各区“互联网+政务服务”改革负责同志的共同见证下，我局胡细银副局长签发了全市第一张政务电子证照--市清林径引水调蓄工程取水许可证。
+
+                                        　　公共服务综合信息系统的上线标志着我市政务服务全面实现
+                                        “一码管理、一门集中、一窗受理、一网通办、一号连通、一证申办、一库共享、一体运行”，可有效解决群众办事跑路多、重复提交材料等难题，真正实现了“证照线上跑，企业一身轻”。
+                                    </p>
+                                </div>
+                                <h3><a href="#">深圳市水务工程质量安全监督站完成财政性资金项目内部审计单位资质招标工作</a></h3>
+                                <div>
+                                    <p>
+                                        　近期，市水务工程质量安全监督站（挂水务工程造价管理站）在市政府采购中心完成财政性资金项目内部审计单位资质招标工作，五家中标单位将在服务期限内协助市水务工程质量安全监督站开展财政性资金项目的审计工作。
+
+                                        　　为进一步加强内部审计管理工作，监督站于近期召开了中标单位见面会，强调内审工作进度、质量、保证措施、履约评价以及协审组人员管理等工作要求。监督站在加大对协审单位管理力度的同时，将从审计资料受理、过程跟踪、结果审核、审计风险管控、审计档案归档等多方面进行标准化管理，进一步提升审计效率和服务质量。
+                                    </p>
+                                </div>
+                                <h3><a href="#">深圳市水务工程质量安全监督站完成财政性资金项目内部审计单位资质招标工作</a></h3>
+                                <div>
+                                    <p>
+                                        　近期，市水务工程质量安全监督站（挂水务工程造价管理站）在市政府采购中心完成财政性资金项目内部审计单位资质招标工作，五家中标单位将在服务期限内协助市水务工程质量安全监督站开展财政性资金项目的审计工作。
+
+                                        　　为进一步加强内部审计管理工作，监督站于近期召开了中标单位见面会，强调内审工作进度、质量、保证措施、履约评价以及协审组人员管理等工作要求。监督站在加大对协审单位管理力度的同时，将从审计资料受理、过程跟踪、结果审核、审计风险管控、审计档案归档等多方面进行标准化管理，进一步提升审计效率和服务质量。
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!--widgetcontent-->
+                    </div><!--widgetbox-->
+
+                </div><!--one_third last-->
+            </div><!-- #updates -->
+
+        </div><!--contentwrapper-->
+
+        <br clear="all"/>
+
+    </div><!-- centercontent -->
+
+</div><!--bodywrapper-->
+
+</body>
+</html>
